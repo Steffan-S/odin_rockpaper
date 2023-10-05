@@ -23,18 +23,18 @@ console.log(inputPlayer + ' The player');
 
 // When we have input from player and computer, compare two inputs
 // Return outcome comparison
-function playRound(){
-    if (inputPlayer == 'rock' && resultComputerChoice == 'paper'){
+function playRound(player, computer){
+    if (player == 'rock' && computer == 'paper'){
         return 'You lose! Paper beats Rock'; 
-    } else if (inputPlayer == 'rock' && resultComputerChoice == 'scissor'){
+    } else if (player == 'rock' && computer == 'scissor'){
         return 'You win! Rock beats Scissor'; 
-    } else if (inputPlayer == 'paper' && resultComputerChoice == 'rock'){
+    } else if (player == 'paper' && computer == 'rock'){
         return 'You win! Paper beats rock'; 
-    } else if (inputPlayer == 'paper' && resultComputerChoice == 'scissor'){
+    } else if (player == 'paper' && computer == 'scissor'){
         return 'You lose! Scissor beats Paper'; 
-    } else if (inputPlayer == 'scissor' && resultComputerChoice == 'rock'){
+    } else if (player == 'scissor' && computer == 'rock'){
         return 'You lose! Rock beats Scissor'; 
-    } else if (inputPlayer == 'scissor' && resultComputerChoice == 'paper'){
+    } else if (player == 'scissor' && computer == 'paper'){
         return 'You win! Scissor beats paper'; 
     } else {
         return 'You draw!';
@@ -42,5 +42,9 @@ function playRound(){
 }
 
 // Display result for player
-let result = playRound();
+let result = playRound(inputPlayer, resultComputerChoice);
 alert(result);
+
+
+
+// function game();
