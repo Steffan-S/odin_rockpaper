@@ -1,19 +1,18 @@
 // Computer must know the three choices it can pick Form
 const choices = ["rock", "paper", "scissor"];
 // Computer must choose one of the three choices (random)
-let computerChoice = getComputerChoice();
+let computerChoice
 function getComputerChoice () {
     let pickComputerChoice = choices[Math.floor((Math.random() * choices.length))];
 // Computer must return the picked choice
     return pickComputerChoice;
 }
 
-let inputPlayer = getInputPlayer();
+let inputPlayer
 // Player needs to input their choise (rock, paper or scissor)
 // Need to transform input to rule out spelling mistakes
 function getInputPlayer() {
     let pickInputPlayer = prompt('Time to make your choice: Rock, Paper or Scissor').toLowerCase();
-    // console.log(inputPlayer + ' inside player function')
     return pickInputPlayer;
 }
 
@@ -22,6 +21,8 @@ game();
 // When we have input from player and computer, compare two inputs
 // Return outcome comparison
 function playRound(player, computer){
+    
+
     console.log(computerChoice + ' The computer');
     console.log(inputPlayer + ' The player');
     if (player == 'rock' && computer == 'paper'){
@@ -53,25 +54,27 @@ function playRound(player, computer){
 // play 5 games of rock paper scissor
 function game(){
     console.log('starting the game');
+    computerChoice = getComputerChoice();
+    inputPlayer = getInputPlayer();
     playRound(inputPlayer, computerChoice);
 
     console.log('starting 2nd round');
-    getComputerChoice();
-    getInputPlayer();
+    computerChoice = getComputerChoice();
+    inputPlayer = getInputPlayer();
     playRound(inputPlayer, computerChoice);
 
     console.log('starting 3nd round');
-    getComputerChoice();
-    getInputPlayer();
+    computerChoice = getComputerChoice();
+    inputPlayer = getInputPlayer();
     playRound(inputPlayer, computerChoice);
 
     console.log('starting 4nd round');
-    getComputerChoice();
-    getInputPlayer();
+    computerChoice = getComputerChoice();
+    inputPlayer = getInputPlayer();
     playRound(inputPlayer, computerChoice);
 
     console.log('starting 5nd round');
-    getComputerChoice();
-    getInputPlayer();
+    computerChoice = getComputerChoice();
+    inputPlayer = getInputPlayer();
     playRound(inputPlayer, computerChoice);
 }
