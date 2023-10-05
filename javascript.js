@@ -11,6 +11,7 @@ function getComputerChoice () {
     return pickComputerChoice;
 }
 
+
 // Initialize inputplayer variable
 let inputPlayer
 
@@ -21,7 +22,6 @@ function getInputPlayer() {
  // Return picked player choise
     return pickInputPlayer;
 }
-
 
 
 // When we have input from player and computer, compare two inputs
@@ -55,21 +55,15 @@ function playRound(player, computer){
     }
 }
 
-// Display result for player
-// let result = playRound(inputPlayer, resultComputerChoice);
-// alert(result);
-
+// Initialize scoring variables
 let scorePlayer = 0;
 let scoreComputer = 0;
 let scoreDraw = 0;
-// console.log('You won: ' + scorePlayer + ' times, the computer won: ' + scoreComputer + ' times and you drawed: ' +scoreDraw + ' times')
-// score you and computer
-// let scorePlayer = 0;
-// let scoreComputer = 0;
+
 
 // play 5 games of rock paper scissor
 function game(){
-    console.log('starting the game');
+    console.log('starting 1st round');
     computerChoice = getComputerChoice();
     inputPlayer = getInputPlayer();
     playRound(inputPlayer, computerChoice);
@@ -87,13 +81,13 @@ function game(){
     playRound(inputPlayer, computerChoice);
     console.log('You won: ' + scorePlayer + ' times, the computer won: ' + scoreComputer + ' times and you drawed: ' +scoreDraw + ' times')
 
-    console.log('starting 4nd round');
+    console.log('starting 4th round');
     computerChoice = getComputerChoice();
     inputPlayer = getInputPlayer();
     playRound(inputPlayer, computerChoice);
     console.log('You won: ' + scorePlayer + ' times, the computer won: ' + scoreComputer + ' times and you drawed: ' +scoreDraw + ' times')
 
-    console.log('starting 5nd round');
+    console.log('starting 5th round');
     computerChoice = getComputerChoice();
     inputPlayer = getInputPlayer();
     playRound(inputPlayer, computerChoice);
