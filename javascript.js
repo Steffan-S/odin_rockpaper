@@ -25,22 +25,22 @@ console.log(inputPlayer + ' The player');
 // Return outcome comparison
 function playRound(){
     if (inputPlayer == 'rock' && resultComputerChoice == 'paper'){
-        return 'Computer wins'; 
+        return 'You lose! Paper beats Rock'; 
     } else if (inputPlayer == 'rock' && resultComputerChoice == 'scissor'){
-        return 'Player wins'; 
+        return 'You win! Rock beats Scissor'; 
     } else if (inputPlayer == 'paper' && resultComputerChoice == 'rock'){
-        return 'Player wins'; 
+        return 'You win! Paper beats rock'; 
     } else if (inputPlayer == 'paper' && resultComputerChoice == 'scissor'){
-        return 'Computer wins'; 
+        return 'You lose! Scissor beats Paper'; 
     } else if (inputPlayer == 'scissor' && resultComputerChoice == 'rock'){
-        return 'Computer wins'; 
+        return 'You lose! Rock beats Scissor'; 
     } else if (inputPlayer == 'scissor' && resultComputerChoice == 'paper'){
-        return 'Player wins'; 
+        return 'You win! Scissor beats paper'; 
     } else {
-        return 'Draw';
+        return 'You draw!';
     }
 }
 
 // Display result for player
 let result = playRound();
-console.log(result);
+alert(result);
