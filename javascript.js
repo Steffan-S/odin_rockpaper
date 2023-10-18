@@ -23,7 +23,7 @@ playerRock.addEventListener('click', () => {
 
 const playerPaper = document.querySelector('#paper');
 playerPaper.addEventListener('click', () => {
-    inputPlayer = 'scissor';
+    inputPlayer = 'paper';
     computerChoice = getComputerChoice();
     playRound(inputPlayer, computerChoice);
     updateScore();
@@ -44,7 +44,7 @@ function playRound(player, computer){
     console.log(inputPlayer + ' The player');
     if (player == 'rock' && computer == 'paper'){
         scoreComputer++;
-        resultString = 'You lose! Paper beats Rock';
+        resultString = 'You lose! Rock does not beat Paper';
     } else if (player == 'rock' && computer == 'scissor'){
         scorePlayer++;
         resultString = 'You win! Rock beats Scissor'; 
@@ -53,10 +53,10 @@ function playRound(player, computer){
         resultString = 'You win! Paper beats rock'; 
     } else if (player == 'paper' && computer == 'scissor'){
         scoreComputer++;
-        resultString = 'You lose! Scissor beats Paper'; 
+        resultString = 'You lose! Paper does not beat Scissor'; 
     } else if (player == 'scissor' && computer == 'rock'){
         scoreComputer++;
-        resultString = 'You lose! Rock beats Scissor'; 
+        resultString = 'You lose! Scissor does not beat Rock'; 
     } else if (player == 'scissor' && computer == 'paper'){
         scorePlayer++;
         resultString = 'You win! Scissor beats paper'; 
